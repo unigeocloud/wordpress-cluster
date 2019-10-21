@@ -100,18 +100,12 @@ if (!${settings.ls-addon:false}) {
     },
     volumes: [
       "/var/www/webroot/ROOT",
-      "/var/www/webroot/.cache",
       "/etc/nginx/conf.d/SITES_ENABLED"
     ],  
     volumeMounts: {
       "/var/www/webroot/ROOT": {
         readOnly: "false",
         sourcePath: "/data/ROOT",
-        sourceNodeGroup: "storage"
-      },
-      "/var/www/webroot/.cache": {
-        readOnly: "false",
-        sourcePath: "/data/.cache",
         sourceNodeGroup: "storage"
       },
       "/etc/nginx/conf.d/SITES_ENABLED": {
