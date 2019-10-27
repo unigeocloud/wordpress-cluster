@@ -42,10 +42,6 @@ if (${settings.ls-addon:false}) {
       SERVER_WEBROOT: "/var/www/webroot/ROOT",
       REDIS_ENABLED: "true"
     },
-    volumes: [
-      "/var/www/webroot/ROOT",
-      "/var/www/webroot/.cache"
-    ],  
     volumeMounts: {
       "/var/www/webroot/ROOT": {
         readOnly: "false",
@@ -82,11 +78,6 @@ if (!${settings.ls-addon:false}) {
       SERVER_WEBROOT: "/var/www/webroot/ROOT",
       REDIS_ENABLED: "true"
     },
-    volumes: [
-      "/var/www/webroot/ROOT",
-      "/var/www/webroot/.cache",
-      "/etc/nginx/conf.d/SITES_ENABLED"
-    ],  
     volumeMounts: {
       "/var/www/webroot/ROOT": {
         readOnly: "false",
