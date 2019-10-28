@@ -69,7 +69,7 @@ if (!${settings.ls-addon:false}) {
   }, {
     nodeType: "nginxphp-dockerized",
     tag: "1.16.0-php-7.3.8",
-    count: 2,
+    count: 1,
     cloudlets: 8,
     nodeGroup: "cp",
     scalingMode: "STATELESS",
